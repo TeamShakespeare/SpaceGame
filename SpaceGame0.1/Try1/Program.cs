@@ -11,6 +11,8 @@ namespace Try1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Wow!");
+            Console.ReadLine();
         }
     }
 }
