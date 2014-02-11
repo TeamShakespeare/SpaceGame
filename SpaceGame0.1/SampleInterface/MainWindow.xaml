@@ -1,0 +1,9 @@
+﻿<Window x:Class="SampleInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SampleWindow" Height="350" Width="525">
+    <Canvas>
+        <Button Canvas.Left="104" Canvas.Top="48" Click="Button_Click">Open Other Window</Button>
+
+    </Canvas>
+</Window>
