@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceGame
 {
-    public abstract class Ship
+    public abstract class Ship : IWorldObject
     {
         private int healthPoint;
         private int attackDamage;
