@@ -29,6 +29,22 @@ namespace SpaceGame
             get { return healthPoint; }
             set { healthPoint = value; }
         }
+
+        public int Speed
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public void Fire()
+        {
+            throw new System.NotImplementedException();
+        }
         
     }
 }

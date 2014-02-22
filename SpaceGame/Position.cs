@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceGame
 {
-    public abstract class Projectile : IWorldObject
+    public struct Position
     {
-        public int DMGMultipier
+        public int X
         {
             get
             {
@@ -18,9 +18,15 @@ namespace SpaceGame
             }
         }
 
-        public void Fire()
+        public int Y
         {
-            throw new System.NotImplementedException();
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
     }
 }

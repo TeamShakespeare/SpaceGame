@@ -5,8 +5,7 @@ using System.Text;
 
 namespace SpaceGame
 {
-    public class PlayerShip : Ship
+    public class Bullet : Projectile
     {
-        private Inventory inventory;
     }
 }

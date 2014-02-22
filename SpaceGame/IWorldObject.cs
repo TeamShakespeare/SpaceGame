@@ -7,5 +7,18 @@ namespace SpaceGame
 {
     public interface IWorldObject : ParticleSystem.IRenderable
     {
+        bool Alive
+        {
+            get;
+            set;
+        }
+
+        Position Position
+        {
+            get;
+            set;
+        }
+
+        void Move();
     }
 }
