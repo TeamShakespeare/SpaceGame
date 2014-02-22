@@ -4,17 +4,17 @@
 
     public class Shield : Item
     {
-        private static readonly Random rand = new Random();
-
-        protected Shield(string name, int weight)
+        public Shield(Random rand)
+            : base(rand)
         {
-            this.Name = name;
-            this.Weight = weight;
+            this.itemType = ItemType.Shield;
+            SetRandomProps();
         }
 
-        public static override Item GenerateItem()
+        private void SetRandomProps()
         {
-            throw new NotImplementedException();
+            this.bonusValue = (Bonus)(randGenerator.Next(0, 5) * 10);
+            this.Name = Enum.GetName(typeof(Bonus), bonusValue)+" Shield";
         }
     }
 }

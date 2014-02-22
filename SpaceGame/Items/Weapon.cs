@@ -4,17 +4,17 @@
 
     public class Weapon : Item
     {
-        private static readonly Random rand = new Random();
-
-        protected Weapon(string name, int weight)
+        public Weapon(Random rand)
+            : base(rand)
         {
-            this.Name = name;
-            this.Weight = weight;
+            SetRandomProps();
         }
 
-        public static override Item GenerateItem()
+        private void SetRandomProps()
         {
-            throw new NotImplementedException();
+            this.itemType = (ItemType)(randGenerator.Next(0, 1));
+            this.bonusValue = (Bonus)(randGenerator.Next(0, 5) * 10);
+            this.Name = Enum.GetName(typeof(Bonus), bonusValue) + Enum.GetName(typeof(ItemType), itemType);
         }
     }
 }

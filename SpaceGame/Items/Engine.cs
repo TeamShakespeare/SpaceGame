@@ -4,17 +4,17 @@
 
     public class Engine : Item
     {
-        private static readonly Random rand = new Random();
-
-        protected Engine(string name, int weight)
+        public Engine(Random rand)
+            : base(rand)
         {
-            this.Name = name;
-            this.Weight = weight;
+            this.itemType = ItemType.Engine;
+            SetRandomProps();
         }
 
-        public static override Item GenerateItem()
+        private void SetRandomProps()
         {
-            throw new NotImplementedException();
+            this.bonusValue = (Bonus)(randGenerator.Next(0, 5) * 10);
+            this.Name = Enum.GetName(typeof(Bonus), bonusValue)+" Engine";
         }
     }
 }

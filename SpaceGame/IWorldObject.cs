@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceGame
 {
-    public interface IWorldObject : ParticleSystem.IRenderable
+    public interface IWorldObject : IRenderable
     {
         bool Alive
         {

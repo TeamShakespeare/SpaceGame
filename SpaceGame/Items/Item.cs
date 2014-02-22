@@ -1,10 +1,16 @@
 ﻿namespace SpaceGame.Items
 {
+    using System;
     public abstract class Item
     {
         public string Name { get; protected set; }
-        public int Weight { get; protected set; } //If the inventory is limited
+        protected Random randGenerator;
+        protected ItemType itemType;
+        protected Bonus bonusValue;
 
-        public abstract static Item GenerateItem();
+        public Item(Random rand)
+        {
+            this.randGenerator = rand;
+        }
     }
 }
