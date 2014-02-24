@@ -10,6 +10,7 @@ namespace SpaceGame
     {
         private int healthPoint;
         private int attackDamage;
+        private Position position;
 
         public Ship(int healthPoint , int attackDamage)
         {
@@ -45,6 +46,39 @@ namespace SpaceGame
         {
             throw new System.NotImplementedException();
         }
-        
+
+
+        public bool Alive
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public Position Position
+        {
+            get { return this.position; }
+            set { this.position = value; }
+        }
+
+        public void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        public MatrixCoords GetTopLeft()
+        {
+            throw new NotImplementedException();
+        }
+
+        public char[,] GetImage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

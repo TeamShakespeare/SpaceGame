@@ -7,5 +7,6 @@ namespace SpaceGame
 {
     public class EnemyShip : Ship
     {
+
     }
 }
