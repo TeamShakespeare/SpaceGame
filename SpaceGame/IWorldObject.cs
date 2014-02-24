@@ -13,7 +13,7 @@ namespace SpaceGame
             set;
         }
 
-        Position Position
+        MatrixCoords Position
         {
             get;
             set;

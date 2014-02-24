@@ -3,20 +3,20 @@
   <Class Name="SpaceGame.Ship">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAEAAAAAAEAABAAAEAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQIAAAEAgAAAAMAARAAAEAAQAAAAAEAEAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceGame.PlayerShip">
-    <Position X="4" Y="3.25" Width="1.5" />
+    <Position X="3.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.EnemyShip">
-    <Position X="6" Y="3.25" Width="1.5" />
+    <Position X="6.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnemyShip.cs</FileName>
@@ -76,7 +76,7 @@
   <Class Name="SpaceGame.Planet">
     <Position X="8.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAgAAAAAAAQAAAAAAQAAAAAAAEAAAA=</HashCode>
       <FileName>Planet.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

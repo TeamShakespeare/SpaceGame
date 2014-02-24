@@ -16,5 +16,47 @@ namespace SpaceGame
         {
             throw new NotImplementedException();
         }
+
+        public bool Alive
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public Position Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        MatrixCoords IWorldObject.Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

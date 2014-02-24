@@ -22,5 +22,44 @@ namespace SpaceGame
         {
             throw new System.NotImplementedException();
         }
+
+        public bool Alive
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public MatrixCoords Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        public MatrixCoords GetTopLeft()
+        {
+            throw new NotImplementedException();
+        }
+
+        public char[,] GetImage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

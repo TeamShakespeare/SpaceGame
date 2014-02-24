@@ -7,6 +7,10 @@ namespace SpaceGame
 {
     public class EnemyShip : Ship
     {
+        public EnemyShip(int healthPoint, int attackDamage):
+            base(healthPoint , attackDamage)
+        {
 
+        }
     }
 }

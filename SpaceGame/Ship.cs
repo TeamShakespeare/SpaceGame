@@ -80,5 +80,18 @@ namespace SpaceGame
         {
             throw new NotImplementedException();
         }
+
+
+        MatrixCoords IWorldObject.Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
