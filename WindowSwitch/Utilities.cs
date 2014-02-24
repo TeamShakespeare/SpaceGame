@@ -37,7 +37,15 @@ namespace WindowSwitch
             using (StreamWriter sw = new StreamWriter(@"..\..\..\CurrentState.txt"))
             {                
 
-               //Read into properties here
+                foreach (var field in fields)
+                {
+                    sw.WriteLine(field.GetValue(field.Name).ToString());
+                }
+
+                foreach (var prop in properties)
+                {
+                    sw.WriteLine(prop.GetValue(prop.Name));
+                }
             }
         }
         
