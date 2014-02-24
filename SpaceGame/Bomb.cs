@@ -7,5 +7,10 @@ namespace SpaceGame
 {
     public class Bomb : Projectile
     {
+        public override char[,] GetImage()
+        {
+            //TODO: DRAW BOMB
+            return base.GetImage();
+        }
     }
 }

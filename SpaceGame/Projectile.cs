@@ -7,6 +7,8 @@ namespace SpaceGame
 {
     public abstract class Projectile : IWorldObject
     {
+        private MatrixCoords position;
+
         public int DMGMultipier
         {
             get
@@ -39,11 +41,11 @@ namespace SpaceGame
         {
             get
             {
-                throw new NotImplementedException();
+                return this.position;
             }
             set
             {
-                throw new NotImplementedException();
+                this.position = value;
             }
         }
 
@@ -54,12 +56,12 @@ namespace SpaceGame
 
         public MatrixCoords GetTopLeft()
         {
-            throw new NotImplementedException();
+            return this.Position;
         }
 
-        public char[,] GetImage()
+        public virtual char[,] GetImage()
         {
-            throw new NotImplementedException();
+            return new char[,] { { "|" } };
         }
     }
 }
