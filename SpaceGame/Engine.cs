@@ -12,10 +12,10 @@ namespace SpaceGame
         private IRenderer render;
         private PlayerShip player;
 
-        public Engine(ConsoleRenderer render, PlayerShip player)
+        public Engine(ConsoleRenderer render, PlayerShip player , List<IWorldObject> objects)
         {
             this.render = render;
-            worldObejct = new List<IWorldObject>();
+            worldObejct = objects;
             this.player = player;
         }
 
@@ -42,19 +42,27 @@ namespace SpaceGame
                         case ConsoleKey.RightArrow:
                             this.player.Move(counter);
                             break;
-                        //case ConsoleKey.Spacebar:
-                        //    PressedSpacebar();
-                        //break;
+                        case ConsoleKey.Spacebar:
+                            this.AddObject(new Bullet(this.player.ProjectilePosition()));
+                        break;
                         default: break;
 
                     }
                 }
+
+                foreach (var item in this.worldObejct)
+                {
+                    item.Update();
+                }
+
                 foreach (var item in this.worldObejct)
                 {
                     render.EnqueueForRendering(item);
+
                 }
                 render.RenderAll();
                 render.ClearQueue();
+                Thread.Sleep(100);
                 
             }
         }
@@ -73,6 +81,7 @@ namespace SpaceGame
         public void MoveBots()
         {
             throw new System.NotImplementedException();
+            
         }
     }
 }

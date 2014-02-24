@@ -2,6 +2,7 @@
 {
     using SpaceGame.Items;
     using System;
+    using System.Collections.Generic;
 
     class EntryPoint
     {
@@ -10,7 +11,8 @@
         {
             var render = new ConsoleRenderer(50 , 30);
             var player = new PlayerShip();
-            var engine = new Engine(render , player);
+            var objects = new List<IWorldObject>();
+            var engine = new Engine(render , player , objects);
             engine.AddObject(player);
             engine.Run();
         }

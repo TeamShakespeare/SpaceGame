@@ -9,6 +9,11 @@ namespace SpaceGame
     {
         private MatrixCoords position;
 
+        public Projectile(MatrixCoords position)
+        {
+            this.position = position;
+        }
+
         public int DMGMultipier
         {
             get
@@ -61,7 +66,13 @@ namespace SpaceGame
 
         public virtual char[,] GetImage()
         {
-            return new char[,] { { '|' } };
+            return new char[,] { { '7' } };
+        }
+
+
+        public virtual void Update()
+        {
+            
         }
     }
 }

@@ -78,7 +78,7 @@ namespace SpaceGame
         }
 
 
-        MatrixCoords IWorldObject.Position
+        public MatrixCoords Position
         {
             get
             {
@@ -88,6 +88,11 @@ namespace SpaceGame
             {
                 throw new NotImplementedException();
             }
+        }
+
+
+        public void Update()
+        {
         }
     }
 }

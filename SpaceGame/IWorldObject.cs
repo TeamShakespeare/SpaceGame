@@ -20,5 +20,7 @@ namespace SpaceGame
         }
 
         void Move();
+
+        void Update();
     }
 }

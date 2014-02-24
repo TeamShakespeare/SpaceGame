@@ -33,6 +33,10 @@ namespace SpaceGame
             }
         }
 
+        public MatrixCoords ProjectilePosition()
+        {
+            return new MatrixCoords(this.position.Row-1, this.position.Col + 2);
+        }
         public void Move(int number)
         {
             this.position.Col += number;
