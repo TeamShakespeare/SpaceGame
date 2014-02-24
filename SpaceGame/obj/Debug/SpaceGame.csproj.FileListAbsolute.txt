@@ -11,3 +11,4 @@ C:\Users\Puh\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csprojReso
 C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\SpaceGame.exe.config
 C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.exe
 C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.pdb
+C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csprojResolveAssemblyReference.cache
