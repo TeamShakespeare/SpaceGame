@@ -56,7 +56,7 @@ namespace SpaceGame
             {
                 for (int col = 0; col < this.renderContextMatrixCols; col++)
                 {
-                    Console.SetCursorPosition(row, col);
+                    Console.SetCursorPosition(col, row);
                     //Console.BackgroundColor = ConsoleColor.White;
 
                     switch (renderContextMatrix[row, col])
@@ -146,7 +146,7 @@ namespace SpaceGame
             {
                 for (int col = 0; col < this.renderContextMatrixCols; col++)
                 {
-                    this.renderContextMatrix[row, col] = '0';
+                    this.renderContextMatrix[row, col] = ' ';
                 }
             }
         }

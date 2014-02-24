@@ -10,7 +10,7 @@ namespace SpaceGame
     {
         private int healthPoint;
         private int attackDamage;
-        private MatrixCoords position;
+        protected MatrixCoords position;
 
         public Ship(int healthPoint , int attackDamage , MatrixCoords position)
         {

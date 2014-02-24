@@ -10,18 +10,43 @@ namespace SpaceGame
     {
         private List<IWorldObject> worldObejct;
         private IRenderer render;
+        private PlayerShip player;
 
-        public Engine(ConsoleRenderer render)
+        public Engine(ConsoleRenderer render, PlayerShip player)
         {
             this.render = render;
             worldObejct = new List<IWorldObject>();
+            this.player = player;
         }
 
         public void Run()
         {
-            while(true)
+            while (true)
             {
-                foreach (var item in worldObejct)
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo playerKey = Console.ReadKey(true);
+                    while (Console.KeyAvailable)
+                    {
+                        Console.ReadKey(true); //The sokoban moves without lagging
+                    }
+                    switch (playerKey.Key)
+                    {
+
+                        case ConsoleKey.LeftArrow:
+                            this.player.Move(-1);
+                            break;
+                        case ConsoleKey.RightArrow:
+                            this.player.Move(1);
+                            break;
+                        //case ConsoleKey.Spacebar:
+                        //    PressedSpacebar();
+                        //break;
+                        default: break;
+
+                    }
+                }
+                foreach (var item in this.worldObejct)
                 {
                     render.EnqueueForRendering(item);
                 }
@@ -30,6 +55,7 @@ namespace SpaceGame
                 Thread.Sleep(300);
             }
         }
+        
 
         public void AddObject(IWorldObject obj)
         {
