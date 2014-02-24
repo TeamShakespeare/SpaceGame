@@ -13,6 +13,8 @@
             var player = new PlayerShip();
             var objects = new List<IWorldObject>();
             var engine = new Engine(render , player , objects);
+            var enemyShip = new EnemyShip(10, 10, new MatrixCoords(5, 5));
+            engine.AddObject(enemyShip);
             engine.AddObject(player);
             engine.Run();
         }

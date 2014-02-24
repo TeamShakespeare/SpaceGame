@@ -15,8 +15,12 @@ namespace SpaceGame
 
         public override char[,] GetImage()
         {
-            //TODO: DRAW ENEMY SHIP
-            return base.GetImage();
+            return new char[,]
+            {
+            {'5' , '0' , '5' },
+            {'5' , '5' , '5'},
+            {'0' , '5' , '0' },
+            };
         }
     }
 }
