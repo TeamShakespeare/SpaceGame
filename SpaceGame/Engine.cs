@@ -21,23 +21,26 @@ namespace SpaceGame
 
         public void Run()
         {
+            
             while (true)
             {
+                int counter = 1;
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo playerKey = Console.ReadKey(true);
                     while (Console.KeyAvailable)
                     {
                         Console.ReadKey(true); //The sokoban moves without lagging
+                        counter++;
                     }
                     switch (playerKey.Key)
                     {
 
                         case ConsoleKey.LeftArrow:
-                            this.player.Move(-1);
+                            this.player.Move(-counter);
                             break;
                         case ConsoleKey.RightArrow:
-                            this.player.Move(1);
+                            this.player.Move(counter);
                             break;
                         //case ConsoleKey.Spacebar:
                         //    PressedSpacebar();
@@ -52,7 +55,7 @@ namespace SpaceGame
                 }
                 render.RenderAll();
                 render.ClearQueue();
-                Thread.Sleep(300);
+                
             }
         }
         

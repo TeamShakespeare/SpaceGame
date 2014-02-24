@@ -61,7 +61,7 @@ namespace SpaceGame
 
         public virtual char[,] GetImage()
         {
-            return new char[,] { { "|" } };
+            return new char[,] { { '|' } };
         }
     }
 }

@@ -29,17 +29,7 @@ namespace SpaceGame
             }
         }
 
-        public Position Position
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        
 
         public void Move()
         {
