@@ -3,29 +3,29 @@
   <Class Name="SpaceGame.Ship">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQIAAAEAgAAAAMAARAAAEAAQAAAAAEAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAQIAAAEAAAAAAMAARAAAEAAwAAAAAEAEAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceGame.PlayerShip">
-    <Position X="3.5" Y="3.75" Width="1.5" />
+    <Position X="3.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.EnemyShip">
-    <Position X="6.5" Y="4" Width="1.5" />
+    <Position X="6.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnemyShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Projectile">
     <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAgAAAAIAAQAABEAAQAAAAAAAEAAAA=</HashCode>
       <FileName>Projectile.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -41,62 +41,62 @@
   <Class Name="SpaceGame.Missile">
     <Position X="7.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Missile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Bomb">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="9.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bomb.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Items.Item" Collapsed="true">
-    <Position X="4.75" Y="5" Width="1.5" />
+    <Position X="6" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACBAAAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACBAAAAAAQAAAAAAAAAAAACAAAAAgA=</HashCode>
       <FileName>Items\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Items.Shield" Collapsed="true">
-    <Position X="2.5" Y="6.25" Width="1.5" />
+    <Position X="3.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Items\Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Items.Weapon" Collapsed="true">
-    <Position X="7" Y="6.25" Width="1.5" />
+    <Position X="8.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Items\Weapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Planet">
-    <Position X="8.75" Y="3.75" Width="1.5" />
+    <Position X="11.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAgAAAAAAAQAAAAAAQAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAgAAAAAAAQAAAAAAwAAAAAAAEAAAA=</HashCode>
       <FileName>Planet.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceGame.SpaceGameCustomException">
-    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpaceGameCustomException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Inventory">
-    <Position X="9" Y="5.5" Width="1.5" />
+    <Position X="11.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAgAAAAAgAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Inventory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGame.Items.Engine">
-    <Position X="4.75" Y="6.5" Width="1.5" />
+    <Position X="6" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Items\Engine.cs</FileName>
@@ -110,11 +110,25 @@
       <FileName>Bullet.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="SpaceGame.Position">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+  <Class Name="SpaceGame.Items.GenerateItem" Collapsed="true">
+    <Position X="6" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
-      <FileName>Position.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Items\GenerateItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceGame.Engine" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAABAAAAACEAAAAAAAQAAI=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SpaceGame.MatrixCoords" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAwAEAAAAAAAEAAoAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatrixCoords.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="SpaceGame.IWorldObject">
@@ -139,10 +153,17 @@
     </TypeIdentifier>
   </Interface>
   <Enum Name="SpaceGame.Items.Bonus" Collapsed="true">
-    <Position X="6.75" Y="5" Width="1.5" />
+    <Position X="7.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAACAAAAAIAAAIAAACAAAAAAA=</HashCode>
       <FileName>Items\Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpaceGame.Items.ItemType" Collapsed="true">
+    <Position X="4.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAEAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Items\ItemType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Tahoma" Size="8.25" />
