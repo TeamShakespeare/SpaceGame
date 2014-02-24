@@ -10,12 +10,13 @@ namespace SpaceGame
     {
         private int healthPoint;
         private int attackDamage;
-        private Position position;
+        private MatrixCoords position;
 
-        public Ship(int healthPoint , int attackDamage)
+        public Ship(int healthPoint , int attackDamage , MatrixCoords position)
         {
             this.AttackDamage = attackDamage;
             this.HealthPoint = healthPoint;
+            this.position = position;
         }
 
         public int AttackDamage
@@ -60,12 +61,7 @@ namespace SpaceGame
             }
         }
 
-        public Position Position
-        {
-            get { return this.position; }
-            set { this.position = value; }
-        }
-
+       
         public void Move()
         {
             throw new NotImplementedException();
@@ -73,12 +69,12 @@ namespace SpaceGame
 
         public MatrixCoords GetTopLeft()
         {
-            throw new NotImplementedException();
+            return position;
         }
 
-        public char[,] GetImage()
+        public virtual char[,] GetImage()
         {
-            throw new NotImplementedException();
+            return new char[,] { { } };
         }
 
 
