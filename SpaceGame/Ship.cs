@@ -91,7 +91,7 @@ namespace SpaceGame
         }
 
 
-        public void Update()
+        public virtual void Update()
         {
         }
     }

@@ -11,12 +11,15 @@ namespace SpaceGame
         private List<IWorldObject> worldObejct;
         private IRenderer render;
         private PlayerShip player;
+        private Random randomGenerator;
+        private int counterOfInteration;
 
-        public Engine(ConsoleRenderer render, PlayerShip player , List<IWorldObject> objects)
+        public Engine(ConsoleRenderer render, PlayerShip player , List<IWorldObject> objects , Random randomGenerator)
         {
             this.render = render;
             worldObejct = objects;
             this.player = player;
+            this.randomGenerator = randomGenerator;
         }
 
         public void Run()
@@ -24,6 +27,7 @@ namespace SpaceGame
             
             while (true)
             {
+                counterOfInteration++;
                 int counter = 1;
                 if (Console.KeyAvailable)
                 {
@@ -50,6 +54,8 @@ namespace SpaceGame
                     }
                 }
 
+                GenerateRandomEnemy();
+
                 foreach (var item in this.worldObejct)
                 {
                     item.Update();
@@ -66,6 +72,18 @@ namespace SpaceGame
                 
             }
         }
+
+        private void GenerateRandomEnemy()
+        {
+            if (counterOfInteration > 4)
+            {
+                if (randomGenerator.Next(5) == 3)
+                {
+                    counterOfInteration = 0;
+                    this.AddObject(new EnemyShip(20, 10, new MatrixCoords(0, randomGenerator.Next(28)), this.randomGenerator));
+                }
+            }
+        }
         
 
         public void AddObject(IWorldObject obj)
@@ -78,10 +96,5 @@ namespace SpaceGame
             throw new System.NotImplementedException();
         }
 
-        public void MoveBots()
-        {
-            throw new System.NotImplementedException();
-            
-        }
     }
 }
