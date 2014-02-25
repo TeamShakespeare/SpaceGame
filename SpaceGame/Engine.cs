@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using SpaceGame.Items;
 
 namespace SpaceGame
 {
@@ -24,17 +25,20 @@ namespace SpaceGame
 
         public void Run()
         {
-            
+
+            //this.player.Inventory.AddItem(GenerateItem.GenerateRandomItem(randomGenerator));
+
             while (true)
             {
                 counterOfInteration++;
                 int counter = 1;
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo playerKey = Console.ReadKey(true);
                     while (Console.KeyAvailable)
                     {
-                        Console.ReadKey(true); //The sokoban moves without lagging
+                        Console.ReadKey(true);
                         counter++;
                     }
                     switch (playerKey.Key)
@@ -48,7 +52,13 @@ namespace SpaceGame
                             break;
                         case ConsoleKey.Spacebar:
                             this.AddObject(new Bullet(this.player.ProjectilePosition()));
-                        break;
+                            break;
+                        case ConsoleKey.R:
+                            if (this.player.Inventory.Fire(ItemType.Missile))
+                            {
+                                this.AddObject(new Missile(this.player.ProjectilePosition()));
+                            }
+                            break;
                         default: break;
 
                     }
@@ -69,7 +79,7 @@ namespace SpaceGame
                 render.RenderAll();
                 render.ClearQueue();
                 Thread.Sleep(100);
-                
+
             }
         }
 

@@ -28,12 +28,13 @@ namespace SpaceGame
             this.items.Add(item);
         }
 
-        public bool IsInInventory(ItemType type)
+        public bool Fire(ItemType type)
         {
             foreach (var item in this.Items)
             {
                 if (item.ItemType == type)
                 {
+                    this.items.Remove(item);
                     return true;
                 }
             }

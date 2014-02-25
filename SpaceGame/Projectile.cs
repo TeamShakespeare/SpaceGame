@@ -7,7 +7,7 @@ namespace SpaceGame
 {
     public abstract class Projectile : IWorldObject
     {
-        private MatrixCoords position;
+        protected MatrixCoords position;
 
         public Projectile(MatrixCoords position)
         {
@@ -72,7 +72,6 @@ namespace SpaceGame
 
         public virtual void Update()
         {
-            
         }
     }
 }

@@ -13,10 +13,20 @@ namespace SpaceGame
         {
 
         }
+
         public override char[,] GetImage()
         {
-            //TODO: DRAW MISSILE
-            return base.GetImage();
+            return new char[,]
+            {
+            {'0' , '7' , '0' },
+            {'7' , '7' , '7'},
+            {'3' , '0' , '3' },
+            };
+        }
+
+        public override void Update()
+        {
+            this.position += new MatrixCoords(-1, 0);
         }
     }
 }

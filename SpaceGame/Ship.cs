@@ -11,12 +11,14 @@ namespace SpaceGame
         private int healthPoint;
         private int attackDamage;
         protected MatrixCoords position;
+        public Inventory Inventory { get; set; }
 
-        public Ship(int healthPoint , int attackDamage , MatrixCoords position)
+        public Ship(int healthPoint, int attackDamage, MatrixCoords position)
         {
             this.AttackDamage = attackDamage;
             this.HealthPoint = healthPoint;
             this.position = position;
+            this.Inventory = new Inventory();
         }
 
         public int AttackDamage
@@ -24,7 +26,7 @@ namespace SpaceGame
             get { return attackDamage; }
             set { attackDamage = value; }
         }
-        
+
 
         public int HealthPoint
         {
@@ -61,7 +63,7 @@ namespace SpaceGame
             }
         }
 
-       
+
         public void Move()
         {
             throw new NotImplementedException();
