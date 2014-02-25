@@ -98,7 +98,7 @@ namespace SpaceGame
 
         public void AddObject(IWorldObject obj)
         {
-            worldObejct.Add(obj);
+            worldObject.Add(obj);
 
         }
         public void CheckCollision()
