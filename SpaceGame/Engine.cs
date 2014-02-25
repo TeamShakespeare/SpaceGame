@@ -9,7 +9,7 @@ namespace SpaceGame
 {
     public class Engine
     {
-        private List<IWorldObject> worldObejct;
+        private List<IWorldObject> worldObject;
         private IRenderer render;
         private PlayerShip player;
         private Random randomGenerator;
@@ -18,7 +18,7 @@ namespace SpaceGame
         public Engine(ConsoleRenderer render, PlayerShip player , List<IWorldObject> objects , Random randomGenerator)
         {
             this.render = render;
-            worldObejct = objects;
+            worldObject = objects;
             this.player = player;
             this.randomGenerator = randomGenerator;
         }
@@ -66,12 +66,12 @@ namespace SpaceGame
 
                 GenerateRandomEnemy();
 
-                foreach (var item in this.worldObejct)
+                foreach (var item in this.worldObject)
                 {
                     item.Update();
                 }
 
-                foreach (var item in this.worldObejct)
+                foreach (var item in this.worldObject)
                 {
                     render.EnqueueForRendering(item);
 
