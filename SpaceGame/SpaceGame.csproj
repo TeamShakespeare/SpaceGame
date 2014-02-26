@@ -93,6 +93,12 @@
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowSwitch\WindowSwitch.csproj">
+      <Project>{c09ac015-977c-4e1e-8b08-008d95e254f4}</Project>
+      <Name>WindowSwitch</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

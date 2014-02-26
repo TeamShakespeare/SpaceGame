@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 namespace WindowSwitch
 {
@@ -16,8 +18,7 @@ namespace WindowSwitch
         {
             string consolePath = @"..\..\..\SpaceGame\bin\Debug\SpaceGame.exe";
             Process.Start(consolePath);
-            Process.GetCurrentProcess().CloseMainWindow();
-            Tuple<int, string> tu = new Tuple<int, string>(3,"tri");
+            Process.GetCurrentProcess().CloseMainWindow();            
         }
 
         public static void SwitchToWindow()
@@ -27,29 +28,71 @@ namespace WindowSwitch
             Process.GetCurrentProcess().CloseMainWindow();
         }
 
-        /// <summary>
-        /// This function should take the instance of PlayerShip and save its fields and properties to a file.
-        /// </summary>
-        /// <param name="obj"></param>
-        public static void SaveToFile(Object obj)
+        public static void Serialize(Object obj, String pathFile)
         {
-            var properties = obj.GetType().GetProperties();
-            var fields = obj.GetType().GetFields();                    
+            FileStream fs = new FileStream(pathFile, FileMode.Create);
 
-            using (StreamWriter sw = new StreamWriter(@"..\..\..\CurrentState.txt"))
-            {                
+            try
+            {
+                // Construct a BinaryFormatter and use it  
+                // to serialize the data to the stream.
+                BinaryFormatter formatter = new BinaryFormatter();
 
-                foreach (var field in fields)
-                {
-                    sw.WriteLine(field.GetValue(field.Name).ToString());
-                }
-
-                foreach (var prop in properties)
-                {
-                    sw.WriteLine(prop.GetValue(prop.Name));
-                }
+                // Serialize element.
+                formatter.Serialize(fs, obj);
+            }
+            catch (SerializationException e)
+            {
+                //Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+                throw new FieldAccessException("Failed to deserialize. Reason: " + e.Message);
+            }
+            finally
+            {
+                fs.Close();
             }
         }
+
+
+        public static Object Deserialize(string pathFile)
+        {
+            // Open the file containing the data that you want to deserialize.
+            FileStream fs = null;
+            Object obj = new Object();
+            obj = null;
+            try
+            {
+                // Construct a BinaryFormatter and use it  
+                // to serialize the data to the stream.
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                // Deserialize the hashtable from the file and  
+                // assign the reference to the local variable.
+                if (File.Exists(pathFile))
+                {
+
+                    fs = new FileStream(pathFile, FileMode.Open);
+                    obj = formatter.Deserialize(fs);
+                }
+            }
+            catch (SerializationException e)
+            {
+                //Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
+                throw new FieldAccessException("Failed to deserialize. Reason: " + e.Message);
+            }
+            finally
+            {
+                if (fs != null)
+                {
+                    fs.Close();
+                }
+
+            }
+
+            return obj;
+        }
+
+
+       
         
         
 

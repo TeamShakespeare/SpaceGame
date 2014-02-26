@@ -15,3 +15,7 @@ C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csprojRe
 C:\Users\mimir_000\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\SpaceGame.exe.config
 C:\Users\mimir_000\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.exe
 C:\Users\mimir_000\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.pdb
+C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\SpaceGame.exe
+C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\SpaceGame.pdb
+C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\WindowSwitch.dll
+C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\WindowSwitch.pdb

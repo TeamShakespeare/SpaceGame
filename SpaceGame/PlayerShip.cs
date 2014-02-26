@@ -9,28 +9,43 @@ namespace SpaceGame
     {
         private Inventory inventory;
 
+
          //<summary>
-         //A prameterless constructor using default values OR the CurrentState.txt file
+         //A prameterless constructor using default values
          //</summary>
         public PlayerShip()
             :base(10,2,new MatrixCoords(44,20))
         {
-            if (!System.IO.File.Exists(@"..\..\..\CurrentState.txt"))
-            {                
-                this.Speed = 10;
-                this.inventory = new Inventory();
+            this.Speed = 10;
+            this.inventory = new Inventory();
+        }
+
+        //The path to the saved ship file (if any)
+        private static string filePath = @"..\..\..\CurrentState.boat";
+
+        /// <summary>
+        /// A static method to be used in the Engine, either generates a new PleyerShip
+        /// or reads it from a file.
+        /// </summary>
+        /// <returns></returns>
+        public static PlayerShip LoadShip()
+        {
+            if (!System.IO.File.Exists(filePath))
+            {
+                return new PlayerShip();                
             }
             else
             {
-                var fields = this.GetType().GetFields();
-                using (System.IO.StreamReader sr = new System.IO.StreamReader(@"..\..\..\CurrentState.txt"))
-                {
-                    //foreach (var field in fields)
-                    //{
-                    //    this.GetType().GetField(field.Name) = new 
-                    //}
-                }
+                return (PlayerShip)WindowSwitch.Utilities.Deserialize(filePath);
             }
+        }
+
+        /// <summary>
+        /// To be used in the Engine, saves the PlayerShip to a file before switching to ShoppingWindow
+        /// </summary>
+        public void SaveShip()
+        {
+            WindowSwitch.Utilities.Serialize(this,filePath);
         }
 
         public MatrixCoords ProjectilePosition()
