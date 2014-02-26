@@ -3,7 +3,7 @@
   <Class Name="SpaceGame.Ship">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAEAAAAAAEAABAAAEAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQIAAAEAgAAAAMAARAAAEAAQAAAAAEAEAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
