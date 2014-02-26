@@ -11,11 +11,13 @@ namespace WindowSwitch
 {
     public class Utilities
     {
+
         public static void SwitchToConsole()
         {
             string consolePath = @"..\..\..\SpaceGame\bin\Debug\SpaceGame.exe";
             Process.Start(consolePath);
             Process.GetCurrentProcess().CloseMainWindow();
+            Tuple<int, string> tu = new Tuple<int, string>(3,"tri");
         }
 
         public static void SwitchToWindow()

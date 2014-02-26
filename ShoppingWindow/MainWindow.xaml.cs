@@ -24,10 +24,10 @@ namespace ShoppingWindow
         public MainWindow()
         {
             InitializeComponent();
-            
+            //this.DataContext = new ShoppingShip()
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Continue_Click(object sender, RoutedEventArgs e)
         {            
             Utilities.SwitchToConsole();
         }
