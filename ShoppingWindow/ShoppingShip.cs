@@ -19,7 +19,7 @@ namespace ShoppingWindow
 
         internal static List<PropertyInfo> PrepareProps()
         {
-            PropertyInfo[] originalProps = ourShip.GetProperties();
+            PropertyInfo[] originalProps = theOne.GetType().GetProperties();
             List<PropertyInfo> propsList = originalProps.ToList();
             List<PropertyInfo> integerProps = propsList.FindAll(x => x.PropertyType == typeof(int));
 

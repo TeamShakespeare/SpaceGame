@@ -9,7 +9,7 @@
     <Canvas>
         <Button Content="Continue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="403" Canvas.Top="260"
                 Background="DarkGreen" Foreground="White" Click="Continue_Click" />
-        <StackPanel Name="PropetrtyPanel" Height="277" Canvas.Left="26" Canvas.Top="32" Width="265">
+        <StackPanel Name="PropetrtyPanel" Height="237" Canvas.Left="26" Canvas.Top="32" Width="280">
             <Grid Height="37">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="172*"/>

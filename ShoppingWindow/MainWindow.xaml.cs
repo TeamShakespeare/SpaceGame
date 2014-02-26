@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WindowSwitch;
+using ShoppingWindow.Resourses;
 
 namespace ShoppingWindow
 {
@@ -21,15 +22,24 @@ namespace ShoppingWindow
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private PropertyList wholeList = new PropertyList();
         public MainWindow()
         {
             InitializeComponent();
-            //this.DataContext = new ShoppingShip()
+            this.RenderProps();
         }
 
         private void Continue_Click(object sender, RoutedEventArgs e)
         {            
             Utilities.SwitchToConsole();
+        }
+
+        private void RenderProps()
+        {
+            this.PropetrtyPanel.Children.Clear();
+            wholeList.Populate();            
+            this.PropetrtyPanel.Children.Add(this.wholeList.Render());
         }
     }
 }

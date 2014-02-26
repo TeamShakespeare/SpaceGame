@@ -21,7 +21,7 @@ namespace ShoppingWindow.Resourses
         public void Fill(System.Reflection.PropertyInfo prop)
         {
             this.PropName = prop.Name;
-            this.PropValue = (int) prop.GetConstantValue();
+            this.PropValue = (int)prop.GetValue(ShoppingShip.theOne);
         }
 
         public UIElement Render()
@@ -39,6 +39,7 @@ namespace ShoppingWindow.Resourses
             nameField.Height = 27;
             nameField.Margin = new Thickness(0, 10, 0, 0);
             Grid.SetColumn(nameField, 0);
+            container.Children.Add(nameField);
 
             //The PropValue
             var valueBox = new TextBox();
@@ -49,6 +50,7 @@ namespace ShoppingWindow.Resourses
             valueBox.Height = 27;
             valueBox.Margin = new Thickness(10, 10, 0, 0);
             Grid.SetColumn(valueBox, 1);
+            container.Children.Add(valueBox);
 
             //The Up/Down buttons
             var upButton = new Button();
@@ -59,6 +61,7 @@ namespace ShoppingWindow.Resourses
             upButton.Width = 25;
             Grid.SetColumn(upButton, 2);
             upButton.Click += (snd, args) => this.PropValue++;
+            container.Children.Add(upButton);
 
             var downButton = new Button();
             downButton.Content = "&#x25BC;";
@@ -68,6 +71,7 @@ namespace ShoppingWindow.Resourses
             downButton.Width = 25;
             Grid.SetColumn(downButton, 2);
             downButton.Click += (snd, args) => this.PropValue--;
+            container.Children.Add(downButton);
 
 
             return container;

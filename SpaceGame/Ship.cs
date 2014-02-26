@@ -39,7 +39,7 @@ namespace SpaceGame
         {
             get
             {
-                throw new System.NotImplementedException();
+                return 10;
             }
             set
             {

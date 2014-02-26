@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Reflection;
 
 
 namespace ShoppingWindow.Resourses
 {
-    class PropertyList
+    public class PropertyList
     {
         private List<PropGrid> ShipProps { get; set; }
 
@@ -20,7 +21,13 @@ namespace ShoppingWindow.Resourses
 
         public void Populate()
         {
-
+            var ourList = ShoppingShip.PrepareProps();
+            foreach (var p in ourList)
+            {
+                PropGrid pg = new PropGrid();
+                pg.Fill(p);
+                this.ShipProps.Add(pg);
+            }
         }
 
         public UIElement Render()
