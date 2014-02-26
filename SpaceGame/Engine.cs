@@ -59,6 +59,9 @@ namespace SpaceGame
                                 this.AddObject(new Missile(this.player.ProjectilePosition()));
                             }
                             break;
+                        case ConsoleKey.Escape:
+                            EscapeToShop();
+                            break;
                         default: break;
 
                     }
@@ -104,6 +107,15 @@ namespace SpaceGame
         public void CheckCollision()
         {
             throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Save&switsh to window mode
+        /// </summary>
+        private void EscapeToShop()
+        {
+            player.SaveShip();
+            WindowSwitch.Utilities.SwitchToWindow();
         }
 
     }
