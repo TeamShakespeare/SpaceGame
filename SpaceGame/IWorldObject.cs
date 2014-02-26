@@ -13,12 +13,14 @@ namespace SpaceGame
             set;
         }
 
-        Position Position
+        MatrixCoords Position
         {
             get;
             set;
         }
 
         void Move();
+
+        void Update();
     }
 }

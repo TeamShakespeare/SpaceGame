@@ -12,3 +12,6 @@ C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\SpaceGame.exe.conf
 C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.exe
 C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.pdb
 C:\Users\vncii\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csprojResolveAssemblyReference.cache
+C:\Users\mimir_000\Documents\GitHub\SpaceGame\SpaceGame\bin\Debug\SpaceGame.exe.config
+C:\Users\mimir_000\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.exe
+C:\Users\mimir_000\Documents\GitHub\SpaceGame\SpaceGame\obj\Debug\SpaceGame.pdb

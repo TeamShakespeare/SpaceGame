@@ -28,22 +28,18 @@ namespace SpaceGame
             this.items.Add(item);
         }
 
-        public void IsInInventory(ItemType type)
+        public bool Fire(ItemType type)
         {
-            //TODO:Implement
-            switch (type)
+            foreach (var item in this.Items)
             {
-                case ItemType.Missile:
-                    break;
-                case ItemType.Bomb:
-                    break;
-                case ItemType.Engine:
-                    break;
-                case ItemType.Shield:
-                    break;
-                default:
-                    break;
+                if (item.ItemType == type)
+                {
+                    this.items.Remove(item);
+                    return true;
+                }
             }
+
+            return false;
         }
     }
 }

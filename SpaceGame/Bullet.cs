@@ -7,5 +7,20 @@ namespace SpaceGame
 {
     public class Bullet : Projectile
     {
+        public Bullet(MatrixCoords coords)
+            : base(coords)
+        {
+
+        }
+
+        public override void Update()
+        {
+            this.Position -= new MatrixCoords(3, 0);
+        }
+        public override char[,] GetImage()
+        {
+            return new char[,] { { '3' } };
+        }
+
     }
 }

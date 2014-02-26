@@ -13,7 +13,7 @@ namespace SpaceGame
          //A prameterless constructor using default values OR the CurrentState.txt file
          //</summary>
         public PlayerShip()
-            :base(10,2)
+            :base(10,2,new MatrixCoords(44,20))
         {
             if (!System.IO.File.Exists(@"..\..\..\CurrentState.txt"))
             {                
@@ -31,6 +31,27 @@ namespace SpaceGame
                     //}
                 }
             }
+        }
+
+        public MatrixCoords ProjectilePosition()
+        {
+            return new MatrixCoords(this.position.Row-1, this.position.Col + 2);
+        }
+        public void Move(int number)
+        {
+            this.position.Col += number;
+        }
+
+        public override char[,] GetImage()
+        {
+            return new char[,]
+            {
+            {'0' , '0' , '7' , '0' , '0'},
+            {'7' , '0' , '7' , '0' , '7'},
+            {'0' , '7' , '7' , '7' , '0'},
+            {'7' , '7' , '0' , '7' , '7'},
+            {'7' , '0' , '0' , '0' , '7'},
+            };
         }
     }
 }

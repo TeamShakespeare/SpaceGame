@@ -7,6 +7,13 @@ namespace SpaceGame
 {
     public abstract class Projectile : IWorldObject
     {
+        protected MatrixCoords position;
+
+        public Projectile(MatrixCoords position)
+        {
+            this.position = position;
+        }
+
         public int DMGMultipier
         {
             get
@@ -21,6 +28,50 @@ namespace SpaceGame
         public void Fire()
         {
             throw new System.NotImplementedException();
+        }
+
+        public bool Alive
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public MatrixCoords Position
+        {
+            get
+            {
+                return this.position;
+            }
+            set
+            {
+                this.position = value;
+            }
+        }
+
+        public void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        public MatrixCoords GetTopLeft()
+        {
+            return this.Position;
+        }
+
+        public virtual char[,] GetImage()
+        {
+            return new char[,] { { '7' } };
+        }
+
+
+        public virtual void Update()
+        {
         }
     }
 }

@@ -10,12 +10,15 @@ namespace SpaceGame
     {
         private int healthPoint;
         private int attackDamage;
-        private Position position;
+        protected MatrixCoords position;
+        public Inventory Inventory { get; set; }
 
-        public Ship(int healthPoint , int attackDamage)
+        public Ship(int healthPoint, int attackDamage, MatrixCoords position)
         {
             this.AttackDamage = attackDamage;
             this.HealthPoint = healthPoint;
+            this.position = position;
+            this.Inventory = new Inventory();
         }
 
         public int AttackDamage
@@ -23,7 +26,7 @@ namespace SpaceGame
             get { return attackDamage; }
             set { attackDamage = value; }
         }
-        
+
 
         public int HealthPoint
         {
@@ -60,11 +63,6 @@ namespace SpaceGame
             }
         }
 
-        public Position Position
-        {
-            get { return this.position; }
-            set { this.position = value; }
-        }
 
         public void Move()
         {
@@ -73,12 +71,30 @@ namespace SpaceGame
 
         public MatrixCoords GetTopLeft()
         {
-            throw new NotImplementedException();
+            return position;
         }
 
-        public char[,] GetImage()
+        public virtual char[,] GetImage()
         {
-            throw new NotImplementedException();
+            return new char[,] { { } };
+        }
+
+
+        public MatrixCoords Position
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+
+        public virtual void Update()
+        {
         }
     }
 }

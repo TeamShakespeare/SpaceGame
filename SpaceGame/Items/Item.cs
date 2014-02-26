@@ -12,5 +12,13 @@
         {
             this.randGenerator = rand;
         }
+
+        public ItemType ItemType
+        {
+            get 
+            {
+                return this.itemType;
+            }
+        }
     }
 }
