@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceGame
 {
+    [Serializable]
     public struct MatrixCoords
     {
         public int Row { get; set; }

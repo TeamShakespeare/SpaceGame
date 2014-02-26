@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceGame
 {
+    [Serializable]
     public abstract class Ship : IWorldObject
     {
         private int healthPoint;

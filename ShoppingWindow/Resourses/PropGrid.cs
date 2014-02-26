@@ -18,6 +18,12 @@ namespace ShoppingWindow.Resourses
         public string PropName { get; set; }
         public int PropValue { get; set; }
 
+        public void Fill(System.Reflection.PropertyInfo prop)
+        {
+            this.PropName = prop.Name;
+            this.PropValue = (int) prop.GetConstantValue();
+        }
+
         public UIElement Render()
         {
             //The Grid field

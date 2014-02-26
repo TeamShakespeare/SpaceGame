@@ -6,6 +6,7 @@ using SpaceGame.Items;
 
 namespace SpaceGame
 {
+    [Serializable]
     public class Inventory
     {
         private List<Item> items;

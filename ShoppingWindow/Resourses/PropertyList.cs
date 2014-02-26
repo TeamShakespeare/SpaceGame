@@ -18,15 +18,25 @@ namespace ShoppingWindow.Resourses
             this.ShipProps = new List<PropGrid>();
         }
 
+        public void Populate()
+        {
+
+        }
+
         public UIElement Render()
         {
-            var propList = 
-            
+            var list = new ListBox();
 
             foreach (var shipProp in this.ShipProps)
 	        {
 		        var renderedPropGrid = shipProp.Render();
+
+                var propertyListItem = new ListBoxItem();
+                propertyListItem.Content = renderedPropGrid;
+                list.Items.Add(propertyListItem);
 	        }
+
+            return list;
         }
     }
 }

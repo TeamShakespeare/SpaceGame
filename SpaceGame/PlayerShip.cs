@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SpaceGame
 {
+    [Serializable]
     public class PlayerShip : Ship
     {
         private Inventory inventory;
